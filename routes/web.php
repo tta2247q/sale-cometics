@@ -3,9 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 
-Route::get('/', function () {
-    return view('Admin.product.index');
-});
+Route::get('/', [ProductController::class, 'index']);
 
 Route::get('/products', [ProductController::class, 'index'])->name('Admin.products.index');
 

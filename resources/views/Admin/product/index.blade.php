@@ -23,8 +23,8 @@
         <div class="col-md-3">
             <div class="card text-white bg-warning mb-3">
                 <div class="card-body">
-                    <h5 class="card-title">Revenue</h5>
-                    <p class="card-text">$12,000</p>
+                    <h5 class="card-title">Product</h5>
+                    <p class="card-text">{{$totalProducts}}</p>
                 </div>
             </div>
         </div>
@@ -52,26 +52,37 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Role</th>
-                        <th>Status</th>
+                        <th>Name product</th>
+                        <th>description product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
                         <th>Operation</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($products as $product)
                         <tr>
-                            <td>{{ $product->id }}</td>
+                            <td>{{ $loop->iteration }}</td>
                             <td>{{ $product->name }}</td>
-                            <td>{{ $product->description }}</td>
+                            <td>
+                                @if ($product->image)
+                                    <img src="{{ asset('storage/' . $product->image) }}" style="max-width:100px">
+                                @endif
+                            </td>
                             <td>{{ $product->price }}</td>
                             <td>{{ $product->quantity }}</td>
                             <td>
-                                <a href="{{ route('Admin.products.show', $product->id) }}" class="btn btn-sm btn-info text-white">Chi
+                                <a href="{{ route('Admin.products.show', $product->id) }}"
+                                    class="btn btn-sm btn-info text-white">Chi
                                     tiết</a>
-                                <button class="btn btn-sm btn-warning">Sửa</button>
-                                <button class="btn btn-sm btn-danger">Xóa</button>
+                                <a href="{{ route('Admin.products.edit', $product->id) }}"
+                                    class="btn btn-sm btn-warning">Sửa</a>
+                                <form action="{{ route('Admin.products.destroy', $product->id) }}" method="POST"
+                                    style="display:inline-block;" onsubmit="return confirm('Bạn có chắc muốn xóa?');">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-sm btn-danger">Xóa</button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach
