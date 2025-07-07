@@ -3,9 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 
-Route::get('/', [ProductController::class, 'index']);
+Route::get('/', function () {
+    return view('front-end.pages.home');
+})->name('home');
 
-Route::get('/products', [ProductController::class, 'index'])->name('Admin.products.index');
+
+Route::get('/Admin/product', [ProductController::class, 'index'])->name('Admin.products.index');
 
 // Hiển thị form thêm sản phẩm
 Route::get('/Admin/product/create', [ProductController::class, 'create'])->name('Admin.products.create');
