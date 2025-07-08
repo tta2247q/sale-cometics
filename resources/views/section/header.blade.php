@@ -48,7 +48,7 @@
             <!-- Desktop menu -->
             <div class="collapse navbar-collapse d-none d-lg-block">
                 <ul class="navbar-nav mx-auto gap-lg-3 fw-semibold">
-                    <li class="nav-item px-lg-3"><a class="nav-link" href="#">TRANG CHỦ</a></li>
+                    <li class="nav-item px-lg-3"><a class="nav-link" href="#">@lang('message.home')</a></li>
                     <li class="nav-item px-lg-3"><a class="nav-link" href="#">GIỚI THIỆU</a></li>
                     <li class="nav-item dropdown px-lg-3">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -63,6 +63,18 @@
                     <li class="nav-item px-lg-3"><a class="nav-link" href="#">GIỎ HÀNG</a></li>
                 </ul>
             </div>
+            <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ strtoupper(app()->getLocale()) }}
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item" href="{{ route('language.switch', 'en') }}">English</a></li>
+                            <li><a class="dropdown-item" href="{{ route('language.switch', 'vi') }}">Tiếng Việt</a></li>
+                            <li><a class="dropdown-item" href="{{ route('language.switch', 'fr') }}">Français</a></li>
+                            <li><a class="dropdown-item" href="{{ route('language.switch', 'ja') }}">日本語</a></li>
+                        </ul>
+                    </div>
 
             <!-- Icons -->
             <div class="d-none d-lg-flex align-items-center gap-3">

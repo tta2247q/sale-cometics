@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\LanguageController;
+
 
 Route::get('/', function () {
     return view('front-end.pages.home');
@@ -27,3 +29,5 @@ Route::put('/products/{product}', [ProductController::class, 'update'])->name('A
 
 // Xoá sản phẩm
 Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('Admin.products.destroy');
+
+Route::get('/language/{locale}', [LanguageController::class, 'switch'])->name('language.switch');

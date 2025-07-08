@@ -4,7 +4,7 @@
         <i class="bi bi-arrow-left"></i> Quay lại
     </a>
     <h2>Chi tiết sản phẩm</h2>
-    <form>
+    <div>
         <div class="row mb-3">
             <div class="col-md-2">
                 <label for="productId" class="form-label">ID</label>
@@ -39,5 +39,12 @@
             <label for="productDescription" class="form-label">Mô tả</label>
             <textarea class="form-control" id="productDescription" rows="4" readonly>{{ $product->description }}</textarea>
         </div>
-    </form>
+        <a href="{{ route('Admin.products.edit', $product->id) }}" class="btn btn-warning">Sửa</a>
+        <form action="{{ route('Admin.products.destroy', $product->id) }}" method="POST"
+            onsubmit="return confirm('Bạn có chắc muốn xóa?');">
+            @csrf
+            @method('DELETE')
+            <button class="btn btn-danger" type="submit">Xóa</button>
+        </form>
+    </div>
 @endsection
