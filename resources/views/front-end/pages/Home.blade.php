@@ -263,7 +263,7 @@
     <h5 class="fw-bold mb-4">Khách hàng của chúng tôi nói gì</h5>
 
     <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
+      <div class="carousel-inner mb-5">
 
         <!-- Slide 1 -->
         <div class="carousel-item active">
