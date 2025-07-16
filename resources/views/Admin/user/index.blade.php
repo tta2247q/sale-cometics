@@ -1,6 +1,6 @@
 @extends('Admin.index')
 
-@section('title', 'Dashboard/products')
+@section('title', 'Dashboard/users')
 
 @section('content')
     <div class="row mb-4">
@@ -24,7 +24,7 @@
             <div class="card text-white bg-warning mb-3">
                 <div class="card-body">
                     <h5 class="card-title">Product</h5>
-                    <p class="card-text">{{$totalProducts}}</p>
+                    <p class="card-text">{{ $totalProducts }}</p>
                 </div>
             </div>
         </div>
