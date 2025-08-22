@@ -37,4 +37,22 @@ main>.content {
     .sidebar {
         display: none;
     }
+
+}
+
+body.dark {
+    background-color: #121212; /* nền tối */
+    color: #f1f1f1;
+}
+
+body.dark .sidebar {
+    background-color: #1e1e1e;
+}
+
+body.dark .sidebar a {
+    color: #ddd;
+}
+
+body.dark .sidebar a:hover {
+    background-color: #333;
 }

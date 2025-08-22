@@ -24,7 +24,7 @@
             <div class="card text-white bg-warning mb-3">
                 <div class="card-body">
                     <h5 class="card-title">Product</h5>
-                    <p class="card-text">{{ $totalProducts }}</p>
+                    <p class="card-text">{{ $totalUsers }}</p>
                 </div>
             </div>
         </div>
@@ -60,24 +60,24 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($products as $product)
+                    @foreach ($users as $user)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $product->name }}</td>
+                            <td>{{ $user->name }}</td>
                             <td>
-                                @if ($product->image)
-                                    <img src="{{ asset('storage/' . $product->image) }}" style="max-width:100px">
+                                @if ($user->image)
+                                    <img src="{{ asset('storage/' . $user->image) }}" style="max-width:100px">
                                 @endif
                             </td>
-                            <td>{{ $product->price }}</td>
-                            <td>{{ $product->quantity }}</td>
+                            <td>{{ $user->price }}</td>
+                            <td>{{ $user->quantity }}</td>
                             <td>
-                                <a href="{{ route('Admin.products.show', $product->id) }}"
+                                <a href="{{ route('Admin.products.show', $user->id) }}"
                                     class="btn btn-sm btn-info text-white">Chi
                                     tiết</a>
-                                <a href="{{ route('Admin.products.edit', $product->id) }}"
+                                <a href="{{ route('Admin.products.edit', $user->id) }}"
                                     class="btn btn-sm btn-warning">Sửa</a>
-                                <form action="{{ route('Admin.products.destroy', $product->id) }}" method="POST"
+                                <form action="{{ route('Admin.products.destroy', $user->id) }}" method="POST"
                                     style="display:inline-block;" onsubmit="return confirm('Bạn có chắc muốn xóa?');">
                                     @csrf
                                     @method('DELETE')

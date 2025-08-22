@@ -15,6 +15,7 @@ Route::get('/Admin', function () {
 })->name('dashboard');
 
 Route::get('/Admin/product', [ProductController::class, 'index'])->name('Admin.products.index');
+Route::get('/Admin/user', [UserController::class, 'index'])->name('Admin.users.index');
 
 Route::get('/Admin/user/create', [UserController::class, 'create'])->name('Admin.users.create');
 Route::get('/users/{user}/edit', [UserController::class, 'edit'])->name('Admin.users.edit');

@@ -14,3 +14,19 @@ function previewImage(event) {
         preview.style.display = 'none';
     }
 }
+  function toggleTheme() {
+    document.body.classList.toggle('dark');
+    // Lưu theme vào localStorage
+    if (document.body.classList.contains('dark')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  }
+
+  // Giữ theme khi reload
+  window.onload = () => {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
+  };
