@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 
 
@@ -11,8 +12,12 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/Admin', function () {
-   return view('Admin.dashboard.index');
+    return view('Admin.dashboard.index');
 })->name('dashboard');
+
+Route::get('/Admin/category', function () {
+    return view('Admin.categories.index');
+})->name('categories');
 
 Route::get('/Admin/product', [ProductController::class, 'index'])->name('Admin.products.index');
 Route::get('/Admin/user', [UserController::class, 'index'])->name('Admin.users.index');
@@ -34,3 +39,22 @@ Route::delete('/products/{product}', [ProductController::class, 'destroy'])->nam
 
 // language switch route
 Route::get('/language/{locale}', [LanguageController::class, 'switch'])->name('language.switch');
+
+// login routes
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
+Route::post('/register', [AuthController::class, 'register'])->name('register.post');
+
+Route::middleware(['auth', 'role:admin'])->group(function () {
+    Route::get('/admin/dashboard', function () {
+        return view('Admin.dashboard.index');
+    })->name('admin.dashboard');
+});
+
+Route::middleware(['auth', 'role:user'])->group(function () {
+    Route::get('/user/dashboard', function () {
+        return view('front-end.pages.home');
+    })->name('user.dashboard');
+});

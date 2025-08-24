@@ -38,7 +38,7 @@
         </div>
     </div>
 
-    <a href="{{ route('Admin.products.create') }}" type="button" class="btn btn-secondary btn-lg mb-3"
+    <a href="{{ route('Admin.users.create') }}" type="button" class="btn btn-secondary btn-lg mb-3"
         style="width:100px">Add</a>
     @if (session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
@@ -52,10 +52,10 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Name product</th>
-                        <th>description product</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
+                        <th>Name user</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Phone number</th>
                         <th>Operation</th>
                     </tr>
                 </thead>
@@ -64,20 +64,17 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $user->name }}</td>
-                            <td>
-                                @if ($user->image)
-                                    <img src="{{ asset('storage/' . $user->image) }}" style="max-width:100px">
-                                @endif
-                            </td>
-                            <td>{{ $user->price }}</td>
+                            <td>{{$user->email}}</td>
+                            <td>{{ $user->role }}</td>
+                            <td>{{ $user->number_phone }}</td>
                             <td>{{ $user->quantity }}</td>
                             <td>
-                                <a href="{{ route('Admin.products.show', $user->id) }}"
+                                <a href="{{ route('Admin.users.show', $user->id) }}"
                                     class="btn btn-sm btn-info text-white">Chi
                                     tiết</a>
-                                <a href="{{ route('Admin.products.edit', $user->id) }}"
+                                <a href="{{ route('Admin.users.edit', $user->id) }}"
                                     class="btn btn-sm btn-warning">Sửa</a>
-                                <form action="{{ route('Admin.products.destroy', $user->id) }}" method="POST"
+                                <form action="{{ route('Admin.users.destroy', $user->id) }}" method="POST"
                                     style="display:inline-block;" onsubmit="return confirm('Bạn có chắc muốn xóa?');">
                                     @csrf
                                     @method('DELETE')

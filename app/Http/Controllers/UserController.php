@@ -67,7 +67,7 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id, User $user)
+    public function update(Request $request, string $id)
     {
         $request->validate([
             'name'=>'required',
@@ -83,6 +83,7 @@ class UserController extends Controller
             $path = $file->store('users', 'public');
             $data['avatar'] = $path;
         }
+        $user = User::findOrFail($id);
         $user->update($data);
         return redirect()->route('Admin.users.index')->with('success', 'Cập nhật người dùng thành công');
     }

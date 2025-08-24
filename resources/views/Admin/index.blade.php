@@ -6,7 +6,7 @@
     <title>@yield('title', 'Admin Dashboard')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.0/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/admin.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/css/Admin/style.css') }}" type="text/css">
 </head>
 <body>
     <div class="container-fluid">
@@ -22,6 +22,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/admin.js"></script>
+    <script src="assets/js/admin.js"></script>
 </body>
 </html>
