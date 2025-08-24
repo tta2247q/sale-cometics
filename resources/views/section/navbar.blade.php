@@ -5,7 +5,10 @@
             ☰
         </button>
         <span class="navbar-brand">Dashboard</span>
+
+
         <form class="d-flex ms-auto">
+            <button class="btn btn-outline-primary ms-auto d-flex me-3" onclick="toggleTheme()"><i class="bi bi-sun-fill"></i></button>
             <input class="form-control me-2" type="search" placeholder="Search" />
             <button class="btn btn-outline-primary">Search</button>
         </form>
