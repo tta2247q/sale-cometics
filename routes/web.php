@@ -5,6 +5,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CategoryController;
 
 
 Route::get('/', function () {
@@ -15,9 +16,6 @@ Route::get('/Admin', function () {
     return view('Admin.dashboard.index');
 })->name('dashboard');
 
-Route::get('/Admin/category', function () {
-    return view('Admin.categories.index');
-})->name('categories');
 
 Route::get('/Admin/product', [ProductController::class, 'index'])->name('Admin.products.index');
 Route::get('/Admin/user', [UserController::class, 'index'])->name('Admin.users.index');
@@ -36,6 +34,15 @@ Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name
 Route::put('/products/{product}', [ProductController::class, 'update'])->name('Admin.products.update');
 Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('Admin.products.destroy');
 
+Route::prefix('Admin')->name('Admin.')->group(function () {
+    Route::get('/categories', [App\Http\Controllers\CategoryController::class, 'index'])->name('categories.index');
+    Route::get('/categories/create', [App\Http\Controllers\CategoryController::class, 'create'])->name('categories.create');
+    Route::post('/categories', [App\Http\Controllers\CategoryController::class, 'store'])->name('categories.store');
+    Route::get('/categories/{category}', [CategoryController::class, 'show'])->name('categories.show');
+    Route::get('/categories/{category}/edit', [App\Http\Controllers\CategoryController::class, 'edit'])->name('categories.edit');
+    Route::put('/categories/{category}', [App\Http\Controllers\CategoryController::class, 'update'])->name('categories.update');
+    Route::delete('/categories/{category}', [App\Http\Controllers\CategoryController::class, 'destroy'])->name('categories.destroy');
+});
 
 // language switch route
 Route::get('/language/{locale}', [LanguageController::class, 'switch'])->name('language.switch');

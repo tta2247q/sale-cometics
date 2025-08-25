@@ -22,7 +22,7 @@
         <div class="collapse ps-4" id="productMenu">
             <a href="{{ route('Admin.products.index') }}" class="d-block  mb-2">All Products</a>
             <a href="{{ route('Admin.products.create') }}" class="d-block  mb-2">Add Product</a>
-            <a href="{{ route('categories') }}" class="d-block  mb-2">Categories</a>
+            <a href="{{ route('Admin.categories.index') }}" class="d-block  mb-2">Categories</a>
         </div>
 
         <a href="#" class="d-block  mb-2">
