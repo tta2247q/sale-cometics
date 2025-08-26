@@ -38,5 +38,17 @@
             <input type="number" class="form-control" id="quantity" name="quantity" value="{{ $product->quantity }}"
                 required>
         </div>
+        <div class="mb-3">
+            <label for="categories" class="form-label">Danh mục</label>
+            <select name="categories[]" id="categories" class="form-control" multiple required>
+                @foreach($categories as $category)
+                    <option value="{{ $category->id }}"
+                        {{ in_array($category->id, $product->categories->pluck('id')->toArray()) ? 'selected' : '' }}>
+                        {{ $category->name }}
+                    </option>
+                @endforeach
+            </select>
+            <small>Giữ Ctrl (Windows) hoặc Command (Mac) để chọn nhiều</small>
+        </div>
         <button type="submit" class="btn btn-primary">Cập nhật</button>
     @endsection

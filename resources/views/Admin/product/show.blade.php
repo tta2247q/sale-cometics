@@ -34,6 +34,12 @@
                 <input type="number" class="form-control" id="productQuantity" value="{{ $product->quantity }}" readonly>
             </div>
         </div>
+        <p><strong>Danh mục:</strong></p>
+    <ul>
+        @foreach($product->categories as $category)
+            <li>{{ $category->name }}</li>
+        @endforeach
+    </ul>
 
         <div class="mb-3">
             <label for="productDescription" class="form-label">Mô tả</label>

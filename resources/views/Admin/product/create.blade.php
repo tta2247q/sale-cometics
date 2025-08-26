@@ -42,6 +42,15 @@
                 <label for="quantity" class="form-label">Số lượng</label>
                 <input type="number" class="form-control" id="quantity" name="quantity" required>
             </div>
+            <div class="mb-3">
+                <label for="categories" class="form-label">Danh mục</label>
+                <select name="categories[]" id="categories" class="form-select" multiple required>
+                    @foreach ($categories as $category)
+                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endforeach
+                </select>
+                <small class="text-muted">Giữ Ctrl (Windows) hoặc Command (Mac) để chọn nhiều danh mục</small>
+            </div>
             <button type="submit" class="btn btn-primary">Thêm</button>
         </form>
     </div>
