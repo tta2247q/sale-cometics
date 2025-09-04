@@ -80,3 +80,6 @@ Route::middleware('auth')->group(function () {
 Route::get('/cart', [CartItemsController::class, 'index'])->name('cart.index');
 Route::delete('/cart/{cartItem}', [CartItemsController::class, 'remove'])->name('cart.remove');
 Route::get('/products', [ProductController::class, 'showProducts'])->name('products.list');
+Route::middleware('auth')->group(function () {
+    Route::get('/', [CartItemsController::class, 'getCartItems'])->name('home');
+});

@@ -49,7 +49,7 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="" class="menu-link">
+                        <a href="{{route('Admin.users.index')}}" class="menu-link">
                             <span class="material-symbols-outlined menu-icon">chat</span>
                             <span class="title">User</span>
                         </a>

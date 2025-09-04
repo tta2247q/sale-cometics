@@ -18,6 +18,11 @@ class CartItemsController extends Controller
 
         return view('front-end.pages.cartitems', compact('cartItems', 'total'));
     }
+    public function getCartItems()
+{
+    $cartItems = auth()->user()->cartItems()->with('product')->get();
+    return view('front-end.pages.home', compact('cartItems'));
+}
 
     public function add(Product $product)
     {

@@ -1,6 +1,6 @@
 @extends('Admin.index')
 @section('content')
-    {{-- <div class="row mb-4">
+    <div class="row mb-4">
         <div class="col-md-3">
             <div class="card text-white bg-primary mb-3">
                 <div class="card-body">
@@ -86,5 +86,5 @@
                 </tbody>
             </table>
         </div>
-    </div> --}}
+    </div>
 @endsection

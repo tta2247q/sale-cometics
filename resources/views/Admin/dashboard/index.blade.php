@@ -1,6 +1,6 @@
 @extends('Admin.index')
 @section('content')
-    {{-- <div class="main-content-container overflow-hidden">
+    <div class="main-content-container overflow-hidden">
         <div class="row">
             <div class="col-lg-6">
                 <div class="card bg-white p-20 rounded-10 border border-white mb-4">
@@ -1298,8 +1298,8 @@
         </div>
     </div>
 
-    <div class="flex-grow-1"></div> --}}
+    <div class="flex-grow-1"></div>
 
 
-    
+
 @endsection
