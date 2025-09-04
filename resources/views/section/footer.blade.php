@@ -4,7 +4,7 @@
 
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="footer-menu">
-              <img src="images/logo.png" alt="logo">
+              <img style="height: 60px; width: auto;" src="/assets/images/logo.jpg" alt="logo">
               <div class="social-links mt-5">
                 <ul class="d-flex list-unstyled gap-2">
                   <li>
@@ -129,12 +129,12 @@
     <div id="footer-bottom">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-6 copyright">
+          <div class="copyright text-center text-md-center">
             <p>© 2023 Foodmart. All rights reserved.</p>
           </div>
-          <div class="col-md-6 credit-link text-start text-md-end">
+          {{-- <div class="col-md-6 credit-link text-start text-md-end">
             <p>Free HTML Template by <a href="https://templatesjungle.com/">TemplatesJungle</a> Distributed by <a href="https://themewagon">ThemeWagon</a></p>
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>

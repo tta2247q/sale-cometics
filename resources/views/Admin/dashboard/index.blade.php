@@ -1170,12 +1170,14 @@
                     <li class="menu-item">
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
-                            <span type="submit" class="menu-link">
+                            <button type="submit" class="menu-link"
+                                style="background:none; border:none; cursor:pointer;">
                                 <span class="material-symbols-outlined menu-icon">logout</span>
                                 <span class="title">Logout</span>
-                            </span>
+                            </button>
                         </form>
                     </li>
+
 
                 </ul>
             </aside>
@@ -1534,7 +1536,7 @@
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item admin-item-link d-flex align-items-center text-body"
-                                                            href="logout.html">
+                                                            href="{{ route('logout') }}">
                                                             <i class="material-symbols-outlined">logout</i>
                                                             <span class="ms-2">Logout</span>
                                                         </a>

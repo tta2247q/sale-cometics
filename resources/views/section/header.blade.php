@@ -110,7 +110,8 @@
     </div>
 </div>
 
-<div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasSearch" aria-labelledby="Search">
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasSearch"
+    aria-labelledby="Search">
     <div class="offcanvas-header justify-content-center">
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
@@ -135,7 +136,8 @@
             <div class="col-sm-4 col-lg-3 text-center text-sm-start">
                 <div class="main-logo">
                     <a href="index.html">
-                        <img src="/assets/images/logo.jpg" alt="logo" class="" style="height: 60px; width: auto;">
+                        <img src="/assets/images/logo.jpg" alt="logo" class=""
+                            style="height: 60px; width: auto;">
                     </a>
                 </div>
             </div>
@@ -169,12 +171,12 @@
                 class="col-sm-8 col-lg-4 d-flex justify-content-end gap-5 align-items-center mt-4 mt-sm-0 justify-content-center justify-content-sm-end">
                 <div class="support-box text-end d-none d-xl-block">
                     <span class="fs-6 text-muted">For Support?</span>
-                    <h5 class="mb-0">+980-34984089</h5>
+                    <h5 class="mb-0">+974 899027</h5>
                 </div>
 
                 <ul class="d-flex justify-content-end list-unstyled m-0">
                     <li>
-                        <a href="#" class="rounded-circle bg-light p-2 mx-1">
+                        <a href="{{ route('login') }}" class="rounded-circle bg-light p-2 mx-1">
                             <svg width="24" height="24" viewBox="0 0 24 24">
                                 <use xlink:href="#user"></use>
                             </svg>
@@ -238,13 +240,24 @@
 
                             <ul class="navbar-nav justify-content-end menu-list list-unstyled d-flex gap-md-3 mb-0">
                                 <li class="nav-item active">
-                                    <a href="#women" class="nav-link">Home</a>
+                                    <a href="#women" class="nav-link active">Home</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a href="#men" class="nav-link">Sales</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#kids" class="nav-link">Products</a>
+                                    <a href="#kids" class="nav-link">Categories</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" role="button" id="pages"
+                                        data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
+                                    <ul class="dropdown-menu" aria-labelledby="pages">
+                                        <li><a href="index.html" class="dropdown-item">Fruids </a></li>
+                                        <li><a href="index.html" class="dropdown-item">Meets </a></li>
+                                        <li><a href="index.html" class="dropdown-item">Vegetables </a></li>
+                                        <li><a href="index.html" class="dropdown-item">Drinks </a></li>
+                                        <li><a href="index.html" class="dropdown-item">Snacks </a></li>
+                                    </ul>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#accessories" class="nav-link">News</a>

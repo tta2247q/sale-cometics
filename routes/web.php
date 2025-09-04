@@ -65,3 +65,11 @@ Route::middleware(['auth', 'role:user'])->group(function () {
         return view('front-end.pages.home');
     })->name('user.dashboard');
 });
+
+use App\Http\Controllers\CartItemsController;
+
+Route::middleware('auth')->group(function () {
+    Route::get('/cart', [CartItemsController::class, 'index'])->name('cart.index');
+    Route::post('/cart/add/{product}', [CartItemsController::class, 'add'])->name('cart.add');
+    Route::delete('/cart/remove/{cartItem}', [CartItemsController::class, 'remove'])->name('cart.remove');
+});

@@ -2658,7 +2658,7 @@
         </div>
     </section>
 
-    <section class="py-5 my-5">
+    {{-- <section class="py-5 my-5">
         <div class="container-fluid">
 
             <div class="bg-warning py-5 rounded-5" style="background-image: url('images/bg-pattern-2.png') no-repeat;">
@@ -2683,7 +2683,7 @@
             </div>
 
         </div>
-    </section>
+    </section> --}}
 
     <section class="py-5">
         <div class="container-fluid">
