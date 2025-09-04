@@ -14,6 +14,11 @@ class ProductController extends Controller
         $totalProducts = Product::count();
         return view('Admin.product.index', compact('products', 'totalProducts'));
     }
+    public function showProducts()
+{
+    $products = Product::all();
+    return view('front-end.pages.product', compact('products'));
+}
     public function create()
     {
         $categories = Category::all();

@@ -1,40 +1,114 @@
-<nav class="col-md-2 d-none d-md-block sidebar ">
-    <div class="position-sticky pt-3">
-        <h4 class=" text-center mb-4">Admin</h4>
+<div class="sidebar-area" id="sidebar-area">
+            <div class="logo position-relative d-flex align-items-center justify-content-between">
+                <a href="index.html" class="d-block text-decoration-none position-relative">
+                    <img src="assets/images/logo-icon.png" alt="logo-icon">
+                    <span class="logo-text text-secondary fw-semibold">Fila</span>
+                </a>
+                <button
+                    class="sidebar-burger-menu-close bg-transparent py-3 border-0 opacity-0 z-n1 position-absolute top-50 end-0 translate-middle-y"
+                    id="sidebar-burger-menu-close">
+                    <span class="border-1 d-block for-dark-burger"
+                        style="border-bottom: 1px solid #475569; height: 1px; width: 25px; transform: rotate(45deg);"></span>
+                    <span class="border-1 d-block for-dark-burger"
+                        style="border-bottom: 1px solid #475569; height: 1px; width: 25px; transform: rotate(-45deg);"></span>
+                </button>
+                <button class="sidebar-burger-menu bg-transparent p-0 border-0" id="sidebar-burger-menu">
+                    <span class="border-1 d-block for-dark-burger"
+                        style="border-bottom: 1px solid #475569; height: 1px; width: 25px;"></span>
+                    <span class="border-1 d-block for-dark-burger"
+                        style="border-bottom: 1px solid #475569; height: 1px; width: 25px; margin: 6px 0;"></span>
+                    <span class="border-1 d-block for-dark-burger"
+                        style="border-bottom: 1px solid #475569; height: 1px; width: 25px;"></span>
+                </button>
+            </div>
 
-        <a href="{{ route('dashboard') }}" class="d-block  mb-2">
-            <i class="bi bi-speedometer2 me-2"></i>Dashboard
-        </a>
+            <aside id="layout-menu" class="layout-menu menu-vertical menu active" data-simplebar>
+                <ul class="menu-inner">
+                    <li class="menu-title small text-uppercase">
+                        <span class="menu-title-text">MAIN</span>
+                    </li>
+                    <li class="menu-item open">
+                        <a href="javascript:void(0);" class="menu-link active">
+                            <span class="material-symbols-outlined menu-icon">dashboard</span>
+                            <span class="title">Dashboard</span>
+                            <span class="count">11</span>
+                        </a>
+                    </li>
 
-        <a href="{{ route('Admin.users.index') }}" class="d-block  mb-2">
-            <i class="bi bi-people me-2"></i>Users
-        </a>
 
-        <a href="#" class="d-block  mb-2">
-            <i class="bi bi-receipt me-2"></i>Orders
-        </a>
+                    <li class="menu-title small text-uppercase">
+                        <span class="menu-title-text">APPS</span>
+                    </li>
 
-        <!-- Dropdown Products -->
-        <a class="d-block  mb-2" data-bs-toggle="collapse" href="#productMenu" role="button"
-            aria-expanded="false" aria-controls="productMenu">
-            <i class="bi bi-box-seam me-2"></i>Products <i class="bi bi-caret-down-fill float-end"></i>
-        </a>
-        <div class="collapse ps-4" id="productMenu">
-            <a href="{{ route('Admin.products.index') }}" class="d-block  mb-2">All Products</a>
-            <a href="{{ route('Admin.products.create') }}" class="d-block  mb-2">Add Product</a>
-            <a href="{{ route('Admin.categories.index') }}" class="d-block  mb-2">Categories</a>
+                    
+                    <li class="menu-item">
+                        <a href="{{ route('Admin.products.index') }}" class="menu-link">
+                            <span class="material-symbols-outlined menu-icon">perm_contact_calendar</span>
+                            <span class="title">Product</span>
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="chat.html" class="menu-link">
+                            <span class="material-symbols-outlined menu-icon">chat</span>
+                            <span class="title">Chat</span>
+                        </a>
+                    </li>
+
+                    
+
+                  
+
+                    
+
+                    
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle active">
+                            <span class="material-symbols-outlined menu-icon">settings</span>
+                            <span class="title">Settings</span>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="account-settings.html" class="menu-link">
+                                    Account Settings
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="change-password.html" class="menu-link">
+                                    Change Password
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="connections.html" class="menu-link">
+                                    Connections
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="privacy-policy.html" class="menu-link">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="terms-conditions.html" class="menu-link">
+                                    Terms & Conditions
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    
+                    <li class="menu-item">
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="menu-link"
+                                style="background:none; border:none; cursor:pointer;">
+                                <span class="material-symbols-outlined menu-icon">logout</span>
+                                <span class="title">Logout</span>
+                            </button>
+                        </form>
+                    </li>
+
+
+                </ul>
+            </aside>
         </div>
-
-        <a href="#" class="d-block  mb-2">
-            <i class="bi bi-gear me-2"></i>Settings
-        </a>
-
-        <a href="#" class="d-block "
-            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-            <i class="bi bi-box-arrow-right me-2"></i>Logout
-        </a>
-        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-            @csrf
-        </form>
-    </div>
-</nav>

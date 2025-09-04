@@ -252,7 +252,7 @@
                                     <a class="nav-link dropdown-toggle" role="button" id="pages"
                                         data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
                                     <ul class="dropdown-menu" aria-labelledby="pages">
-                                        <li><a href="index.html" class="dropdown-item">Fruids </a></li>
+                                        <li><a href="{{route('products.list')}}" class="dropdown-item">Fruids </a></li>
                                         <li><a href="index.html" class="dropdown-item">Meets </a></li>
                                         <li><a href="index.html" class="dropdown-item">Vegetables </a></li>
                                         <li><a href="index.html" class="dropdown-item">Drinks </a></li>

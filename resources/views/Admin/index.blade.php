@@ -21,9 +21,33 @@
 
 </head>
 
-<body>
-
-    @yield('content')
+<body class="bg-body-bg">
+    {{-- <div class="preloader" id="preloader">
+        <div class="preloader">
+            <div class="waviy position-relative">
+                <span class="d-inline-block">T</span>
+                <span class="d-inline-block">H</span>
+                <span class="d-inline-block">A</span>
+                <span class="d-inline-block">N</span>
+                <span class="d-inline-block">H</span>
+            </div>
+        </div>
+    </div> --}}
+    @include('section.sidebar')
+    <div class="container-fluid">
+        <div class="main-content d-flex flex-column">
+            @include('section.header_admin')
+            @yield('content')
+            @include('section.footer_admin')
+        </div>
+    </div>
+     <button class="btn btn-primary theme-settings-btn p-0 position-fixed z-2 text-center rounded-circle"
+            style="bottom: 24px; right: 24px; width: 56px; height: 56px; line-height: 54px;" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+            <i class="text-white ri-settings-3-fill fs-28" data-bs-toggle="tooltip" data-bs-placement="left"
+                data-bs-title="Click On Theme Settings"></i>
+        </button>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/admin.js"></script>

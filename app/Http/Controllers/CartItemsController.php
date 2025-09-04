@@ -16,7 +16,7 @@ class CartItemsController extends Controller
 
         $total = $cartItems->sum(fn($item) => $item->price * $item->quantity);
 
-        return view('cart.index', compact('cartItems', 'total'));
+        return view('front-end.pages.cartitems', compact('cartItems', 'total'));
     }
 
     public function add(Product $product)

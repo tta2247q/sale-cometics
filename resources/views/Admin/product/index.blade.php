@@ -1,9 +1,6 @@
 @extends('Admin.index')
-
-@section('title', 'Dashboard/products')
-
 @section('content')
-    <div class="row mb-4">
+    {{-- <div class="row mb-4">
         <div class="col-md-3">
             <div class="card text-white bg-primary mb-3">
                 <div class="card-body">
@@ -89,9 +86,5 @@
                 </tbody>
             </table>
         </div>
-    </div>
-
-    <footer class="text-center py-3 mt-4 bg-light border-top">
-        <small class="text-muted">&copy; 2025 Admin Dashboard. All rights reserved.</small>
-    </footer>
+    </div> --}}
 @endsection

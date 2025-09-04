@@ -16,6 +16,9 @@ Route::get('/Admin', function () {
     return view('Admin.dashboard.index');
 })->name('dashboard');
 
+Route::get('/products', function () {
+    return view('front-end.pages.product');
+})->name('products');
 
 Route::get('/Admin/product', [ProductController::class, 'index'])->name('Admin.products.index');
 Route::get('/Admin/user', [UserController::class, 'index'])->name('Admin.users.index');
@@ -76,3 +79,4 @@ Route::middleware('auth')->group(function () {
 // web.php
 Route::get('/cart', [CartItemsController::class, 'index'])->name('cart.index');
 Route::delete('/cart/{cartItem}', [CartItemsController::class, 'remove'])->name('cart.remove');
+Route::get('/products', [ProductController::class, 'showProducts'])->name('products.list');
