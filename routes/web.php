@@ -73,3 +73,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/cart/add/{product}', [CartItemsController::class, 'add'])->name('cart.add');
     Route::delete('/cart/remove/{cartItem}', [CartItemsController::class, 'remove'])->name('cart.remove');
 });
+// web.php
+Route::get('/cart', [CartItemsController::class, 'index'])->name('cart.index');
+Route::delete('/cart/{cartItem}', [CartItemsController::class, 'remove'])->name('cart.remove');

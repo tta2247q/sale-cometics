@@ -243,7 +243,7 @@
                                     <a href="#women" class="nav-link active">Home</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a href="#men" class="nav-link">Sales</a>
+                                    <a href="{{route('cart.index')}}" class="nav-link">Sales</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#kids" class="nav-link">Categories</a>
