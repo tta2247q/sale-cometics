@@ -240,7 +240,7 @@
 
                             <ul class="navbar-nav justify-content-end menu-list list-unstyled d-flex gap-md-3 mb-0">
                                 <li class="nav-item active">
-                                    <a href="#women" class="nav-link active">Home</a>
+                                    <a href="{{route('home')}}" class="nav-link active">Home</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a href="{{route('cart.index')}}" class="nav-link">Sales</a>

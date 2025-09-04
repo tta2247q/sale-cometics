@@ -40,7 +40,7 @@
                         <span class="menu-title-text">APPS</span>
                     </li>
 
-                    
+
                     <li class="menu-item">
                         <a href="{{ route('Admin.products.index') }}" class="menu-link">
                             <span class="material-symbols-outlined menu-icon">perm_contact_calendar</span>
@@ -49,19 +49,12 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="chat.html" class="menu-link">
+                        <a href="" class="menu-link">
                             <span class="material-symbols-outlined menu-icon">chat</span>
-                            <span class="title">Chat</span>
+                            <span class="title">User</span>
                         </a>
                     </li>
 
-                    
-
-                  
-
-                    
-
-                    
                     <li class="menu-item">
                         <a href="javascript:void(0);" class="menu-link menu-toggle active">
                             <span class="material-symbols-outlined menu-icon">settings</span>
@@ -96,7 +89,7 @@
                         </ul>
                     </li>
 
-                    
+
                     <li class="menu-item">
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
