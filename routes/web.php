@@ -20,6 +20,14 @@ Route::get('/products', function () {
     return view('front-end.pages.product');
 })->name('products');
 
+Route::get('/news', function () {
+    return view('front-end.pages.news');
+})->name('news');
+
+Route::get('/contact', function () {
+    return view('front-end.pages.contact');
+})->name('contact');
+
 Route::get('/Admin/product', [ProductController::class, 'index'])->name('Admin.products.index');
 Route::get('/Admin/user', [UserController::class, 'index'])->name('Admin.users.index');
 

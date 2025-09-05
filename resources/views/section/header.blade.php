@@ -192,10 +192,10 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#accessories" class="nav-link">News</a>
+                                    <a href="{{route('news')}}" class="nav-link">News</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#accessories" class="nav-link">Contact</a>
+                                    <a href="{{route('contact')}}" class="nav-link">Contact</a>
                                 </li>
                             </ul>
 
