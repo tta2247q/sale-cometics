@@ -402,9 +402,11 @@
                                     <div class="col">
                                         <div class="product-item">
                                             <span class="badge bg-success position-absolute m-3">-30%</span>
-                                            <a href="#" class="btn-wishlist"><svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg></a>
+                                            <a href="#"
+                                                class="btn-wishlist d-flex align-items-center justify-content-center rounded-circle shadow-sm"
+                                                style="width:50px; height:50px; background-color:#fff; transition:all 0.3s ease;">
+                                                <i class="bi bi-heart fs-4 text-muted"></i>
+                                            </a>
                                             <figure>
                                                 <a href="index.html" title="Product Title">
                                                     <img src="/assets/images/thumb-biscuits.png" class="tab-image">

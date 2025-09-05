@@ -47,6 +47,12 @@
                             <span class="title">Product</span>
                         </a>
                     </li>
+                    <li class="menu-item">
+                        <a href="{{ route('Admin.categories.index') }}" class="menu-link">
+                            <i class="bi bi-tags-fill"></i>
+                            <span class="title">Category</span>
+                        </a>
+                    </li>
 
                     <li class="menu-item">
                         <a href="{{route('Admin.users.index')}}" class="menu-link">
