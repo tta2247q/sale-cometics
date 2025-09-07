@@ -10,14 +10,25 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::all();
+        $products = Product::paginate(12);
         $totalProducts = Product::count();
         return view('Admin.product.index', compact('products', 'totalProducts'));
     }
-    public function showProducts()
+
+public function showProducts(Request $request)
 {
-    $products = Product::all();
-    return view('front-end.pages.product', compact('products'));
+    $query = Product::query();
+
+    if ($request->has('category') && $request->category) {
+        $query->whereHas('categories', function ($q) use ($request) {
+    $q->where('categories.id', $request->category);
+});
+    }
+
+    $products = $query->get();
+    $categories = Category::all();
+
+    return view('front-end.pages.product', compact('products', 'categories'));
 }
     public function create()
     {

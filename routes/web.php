@@ -16,9 +16,7 @@ Route::get('/Admin', function () {
     return view('Admin.dashboard.index');
 })->name('dashboard');
 
-Route::get('/products', function () {
-    return view('front-end.pages.product');
-})->name('products');
+
 
 Route::get('/news', function () {
     return view('front-end.pages.news');

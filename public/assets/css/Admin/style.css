@@ -6380,6 +6380,7 @@ textarea.form-control-lg {
 .card-title {
   margin-bottom: var(--bs-card-title-spacer-y);
   color: var(--bs-card-title-color);
+  
 }
 
 .card-subtitle {
@@ -17577,8 +17578,8 @@ Countdown Add To cart Style
     padding-right: 130px;
   }
 }
-/* 
-Dark Mode SCSS 
+/*
+Dark Mode SCSS
 ===================================================*/
 [data-theme=dark] {
   background-color: #131920 !important;
@@ -18975,8 +18976,8 @@ Dark Mode SCSS
     width: 240px;
   }
 }
-/* 
-Dark Mode SCSS 
+/*
+Dark Mode SCSS
 ===================================================*/
 [data-theme=dark] .sidebar-area {
   background-color: #1b232d;
@@ -19584,8 +19585,8 @@ Dark Mode SCSS
     margin-right: 15px;
   }
 }
-/* 
-Dark Mode SCSS 
+/*
+Dark Mode SCSS
 ===================================================*/
 [data-theme=dark] .header-area {
   background-color: #1b232d !important;
@@ -19665,7 +19666,7 @@ Dark Mode SCSS
   color: #fff !important;
 }
 
-/* 
+/*
 Only Header Dark SCSS
 ===================================================*/
 [header-dark-light-data-theme=header-dark] .header-area {
@@ -19858,8 +19859,8 @@ Only Header Dark SCSS
     padding: 10px 10px;
   }
 }
-/* 
-Dark Mode CSS 
+/*
+Dark Mode CSS
 ===================================================*/
 [data-theme=dark] .footer-area {
   background-color: #1b232d !important;
@@ -20443,8 +20444,8 @@ Dark Mode CSS
     width: 100%;
   }
 }
-/* 
-Dark Mode CSS 
+/*
+Dark Mode CSS
 ===================================================*/
 [data-theme=dark] .default-table-area .table-responsive .table thead tr th {
   background-color: #131920;
@@ -21011,8 +21012,8 @@ Dark Mode CSS
     font-size: 14px;
   }
 }
-/* 
-Dark Mode SCSS 
+/*
+Dark Mode SCSS
 ===================================================*/
 [data-theme=dark] .calendar-container.style-two .calendar-table tr th {
   color: #fff;
@@ -21184,8 +21185,8 @@ Dark Mode SCSS
   border-radius: 0;
 }
 
-/* 
-Dark Mode SCSS 
+/*
+Dark Mode SCSS
 ===================================================*/
 [data-theme=dark] .chat-submit.bg-light {
   background-color: #131920 !important;
@@ -21297,8 +21298,8 @@ Dark Mode SCSS
   margin-right: 0;
 }
 
-/* 
-Dark Mode CSS 
+/*
+Dark Mode CSS
 ===================================================*/
 [data-theme=dark] .custom-pagination .pagination .page-item .page-link {
   border-color: rgba(255, 255, 255, 0.0901960784);
@@ -21428,8 +21429,8 @@ Dark Mode CSS
     margin-top: 8px !important;
   }
 }
-/* 
-Dark Mode SCSS 
+/*
+Dark Mode SCSS
 ===================================================*/
 [data-theme=dark] .card .apexcharts-pie-series path {
   stroke: #1b232d;
@@ -21556,8 +21557,8 @@ Dark Mode SCSS
     padding-bottom: 0;
   }
 }
-/* 
-Dark Mode SCSS 
+/*
+Dark Mode SCSS
 ===================================================*/
 [data-theme=dark] .border-end-custom::before {
   background-color: rgba(255, 255, 255, 0.0901960784);
@@ -21736,8 +21737,8 @@ Dark Mode SCSS
   cursor: pointer;
 }
 
-/* 
-Dark Mode SCSS 
+/*
+Dark Mode SCSS
 ===================================================*/
 [data-theme=dark] .price-slider .slider {
   background-color: #131920;
@@ -22339,8 +22340,8 @@ Dark Mode SCSS
     width: 230px;
   }
 }
-/* 
-Dark Mode SCSS 
+/*
+Dark Mode SCSS
 ===================================================*/
 [data-theme=dark] .header-navbar {
   background-color: #1b232d;
