@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CartItemsController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Users\ProfileController;
 
 // ----------- Static Pages -----------
 Route::get('/news', [HomeController::class, 'news'])->name('news');
@@ -62,7 +63,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
 // ----------- User Routes -----------
 Route::middleware(['auth', 'role:user'])->group(function () {
-    Route::get('/user/dashboard', function () {
+    Route::get('/', function () {
         return view('front-end.pages.home');
     })->name('user.dashboard');
 });
@@ -71,11 +72,17 @@ Route::middleware(['auth', 'role:user'])->group(function () {
 Route::middleware('auth')->group(function () {
     Route::get('/cart', [CartItemsController::class, 'index'])->name('cart.index');
     Route::post('/cart/add/{product}', [CartItemsController::class, 'add'])->name('cart.add');
+    Route::post('/cart/update/{cartItem}', [CartItemsController::class, 'update'])->name('cart.update'); // thêm dòng này
     Route::delete('/cart/remove/{cartItem}', [CartItemsController::class, 'remove'])->name('cart.remove');
+    Route::delete('/cart/clear', [CartItemsController::class, 'clear'])->name('cart.clear'); // nếu muốn xoá hết
 });
 
 // ----------- Public Product List -----------
 Route::get('/products', [ProductController::class, 'showProducts'])->name('products.list');
 
 // ----------- Home Route -----------
-Route::get('/', [CartItemsController::class, 'getCartItems'])->name('home');
+// Route::get('/c', [CartItemsController::class, 'getCartItems'])->name('home');
+
+
+Route::get('profile/edit/{id}', [ProfileController::class, 'edit'])->name('users.edit');
+Route::put('profile/update/{id}', [ProfileController::class, 'update'])->name('users.update');

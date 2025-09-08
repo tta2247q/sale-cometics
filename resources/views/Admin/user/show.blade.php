@@ -22,10 +22,10 @@
                             <div class="avatar-container">
                                 @if ($user->avatar)
                                     <img src="{{ asset('storage/' . $user->avatar) }}" alt="Avatar"
-                                        class="rounded-circle shadow" width="100" height="100">
+                                        class="rounded-circle shadow" width="100" height="100" style="object-fit: cover;">
                                 @else
                                     <img src="https://ui-avatars.com/api/?name={{ urlencode($user->name) }}&background=0D8ABC&color=fff&size=100"
-                                        alt="Avatar" class="rounded-circle shadow" width="100" height="100">
+                                        alt="Avatar" class="rounded-circle shadow" width="100" height="100" style="object-fit: cover;">
                                 @endif
                                 <span
                                     class="status-badge {{ $user->is_online ? 'status-online' : 'status-offline' }}"></span>
@@ -45,7 +45,7 @@
                                     </li>
                                     <li class="list-group-item user-info-item">
                                         <i class="bi bi-telephone me-2"></i>
-                                        <strong>Số điện thoại:</strong> {{ $user->phone ?? 'Chưa cập nhật' }}
+                                        <strong>Số điện thoại:</strong> {{ $user->number_phone ?? 'Chưa cập nhật' }}
                                     </li>
                                     <li class="list-group-item user-info-item">
                                         <i class="bi bi-geo-alt me-2"></i>

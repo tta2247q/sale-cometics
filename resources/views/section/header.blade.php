@@ -27,7 +27,7 @@
 
             <div class="col-sm-4 col-lg-3 text-center text-sm-start">
                 <div class="main-logo">
-                    <a href="{{ route('home') }}">
+                    <a href="{{ route('user.dashboard') }}">
                         <img src="/assets/images/logo.jpg" alt="logo" class=""
                             style="height: 60px; width: auto;">
                     </a>
@@ -144,7 +144,7 @@
 
                             <ul class="navbar-nav justify-content-end menu-list list-unstyled d-flex gap-md-3 mb-0">
                                 <li class="nav-item active">
-                                    <a href="{{ route('home') }}" class="nav-link active">Home</a>
+                                    <a href="{{ route('user.dashboard') }}" class="nav-link active">Home</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a href="" class="nav-link">Sales</a>

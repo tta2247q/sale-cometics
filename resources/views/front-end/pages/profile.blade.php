@@ -15,7 +15,7 @@
                         <p class="text-muted mb-1">{{ Auth::user()->email }}</p>
                         <p class="text-muted small">Thành viên từ: {{ Auth::user()->created_at->format('d/m/Y') }}</p>
 
-                        <a href="{{ route('Admin.users.edit', Auth::user()->id) }}"
+                        <a href="{{ route('users.edit', Auth::user()->id) }}"
                             class="btn btn-primary btn-sm mt-2">Chỉnh sửa hồ sơ</a>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                     <div class="card-body">
                         <p><strong>Họ và tên:</strong> {{ Auth::user()->name }}</p>
                         <p><strong>Email:</strong> {{ Auth::user()->email }}</p>
-                        <p><strong>Số điện thoại:</strong> {{ Auth::user()->phone ?? 'Chưa cập nhật' }}</p>
+                        <p><strong>Số điện thoại:</strong> {{ Auth::user()->number_phone ?? 'Chưa cập nhật' }}</p>
                         <p><strong>Địa chỉ:</strong> {{ Auth::user()->address ?? 'Chưa cập nhật' }}</p>
                     </div>
                 </div>

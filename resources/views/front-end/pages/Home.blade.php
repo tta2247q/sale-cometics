@@ -7,11 +7,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-
                     <div class="banner-blocks">
-
                         <div class="banner-ad large bg-info block-1">
-
                             <div class="swiper main-swiper">
                                 <div class="swiper-wrapper">
 
@@ -356,9 +353,9 @@
                                     <div class="col">
                                         <div class="product-item">
                                             <span class="badge bg-success position-absolute m-3">-30%</span>
-                                            <a href="#" class="btn-wishlist"><svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg></a>
+                                            <a href="#" class="btn-wishlist">
+                                                <i class="bi bi-heart"></i>
+                                            </a>
                                             <figure>
                                                 <a href="index.html" title="Product Title">
                                                     <img src="/assets/images/thumb-bananas.png" class="tab-image">
@@ -376,23 +373,22 @@
                                                         <button type="button"
                                                             class="quantity-left-minus btn btn-danger btn-number"
                                                             data-type="minus">
-                                                            <svg width="16" height="16">
-                                                                <use xlink:href="#minus"></use>
-                                                            </svg>
+                                                            <i class="bi bi-dash"></i>
                                                         </button>
                                                     </span>
+
                                                     <input type="text" id="quantity" name="quantity"
-                                                        class="form-control input-number" value="1">
+                                                        class="form-control input-number text-center" value="1">
+
                                                     <span class="input-group-btn">
                                                         <button type="button"
                                                             class="quantity-right-plus btn btn-success btn-number"
                                                             data-type="plus">
-                                                            <svg width="16" height="16">
-                                                                <use xlink:href="#plus"></use>
-                                                            </svg>
+                                                            <i class="bi bi-plus"></i>
                                                         </button>
                                                     </span>
                                                 </div>
+
                                                 <a href="#" class="nav-link">Add to Cart <iconify-icon
                                                         icon="uil:shopping-cart"></a>
                                             </div>
@@ -402,10 +398,8 @@
                                     <div class="col">
                                         <div class="product-item">
                                             <span class="badge bg-success position-absolute m-3">-30%</span>
-                                            <a href="#"
-                                                class="btn-wishlist d-flex align-items-center justify-content-center rounded-circle shadow-sm"
-                                                style="width:50px; height:50px; background-color:#fff; transition:all 0.3s ease;">
-                                                <i class="bi bi-heart fs-4 text-muted"></i>
+                                            <a href="#" class="btn-wishlist">
+                                                <i class="bi bi-heart"></i>
                                             </a>
                                             <figure>
                                                 <a href="index.html" title="Product Title">
@@ -449,9 +443,9 @@
 
                                     <div class="col">
                                         <div class="product-item">
-                                            <a href="#" class="btn-wishlist"><svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg></a>
+                                            <a href="#" class="btn-wishlist">
+                                                <i class="bi bi-heart"></i>
+                                            </a>
                                             <figure>
                                                 <a href="index.html" title="Product Title">
                                                     <img src="/assets/images/thumb-cucumber.png" class="tab-image">
@@ -494,9 +488,9 @@
 
                                     <div class="col">
                                         <div class="product-item">
-                                            <a href="#" class="btn-wishlist"><svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg></a>
+                                            <a href="#" class="btn-wishlist">
+                                                <i class="bi bi-heart"></i>
+                                            </a>
                                             <figure>
                                                 <a href="index.html" title="Product Title">
                                                     <img src="/assets/images/thumb-milk.png" class="tab-image">
@@ -539,9 +533,9 @@
 
                                     <div class="col">
                                         <div class="product-item">
-                                            <a href="#" class="btn-wishlist"><svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg></a>
+                                            <a href="#" class="btn-wishlist">
+                                                <i class="bi bi-heart"></i>
+                                            </a>
                                             <figure>
                                                 <a href="index.html" title="Product Title">
                                                     <img src="/assets/images/thumb-bananas.png" class="tab-image">
@@ -584,9 +578,9 @@
 
                                     <div class="col">
                                         <div class="product-item">
-                                            <a href="#" class="btn-wishlist"><svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg></a>
+                                            <a href="#" class="btn-wishlist">
+                                                <i class="bi bi-heart"></i>
+                                            </a>
                                             <figure>
                                                 <a href="index.html" title="Product Title">
                                                     <img src="/assets/images/thumb-biscuits.png" class="tab-image">
@@ -629,9 +623,9 @@
 
                                     <div class="col">
                                         <div class="product-item">
-                                            <a href="#" class="btn-wishlist"><svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg></a>
+                                            <a href="#" class="btn-wishlist">
+                                                <i class="bi bi-heart"></i>
+                                            </a>
                                             <figure>
                                                 <a href="index.html" title="Product Title">
                                                     <img src="/assets/images/thumb-cucumber.png" class="tab-image">
@@ -674,9 +668,9 @@
 
                                     <div class="col">
                                         <div class="product-item">
-                                            <a href="#" class="btn-wishlist"><svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg></a>
+                                            <a href="#" class="btn-wishlist">
+                                                <i class="bi bi-heart"></i>
+                                            </a>
                                             <figure>
                                                 <a href="index.html" title="Product Title">
                                                     <img src="/assets/images/thumb-milk.png" class="tab-image">
@@ -719,9 +713,9 @@
 
                                     <div class="col">
                                         <div class="product-item">
-                                            <a href="#" class="btn-wishlist"><svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg></a>
+                                            <a href="#" class="btn-wishlist">
+                                                <i class="bi bi-heart"></i>
+                                            </a>
                                             <figure>
                                                 <a href="index.html" title="Product Title">
                                                     <img src="/assets/images/thumb-bananas.png" class="tab-image">
@@ -764,9 +758,9 @@
 
                                     <div class="col">
                                         <div class="product-item">
-                                            <a href="#" class="btn-wishlist"><svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg></a>
+                                            <a href="#" class="btn-wishlist">
+                                                <i class="bi bi-heart"></i>
+                                            </a>
                                             <figure>
                                                 <a href="index.html" title="Product Title">
                                                     <img src="/assets/images/thumb-biscuits.png" class="tab-image">
@@ -820,9 +814,9 @@
                                     <div class="col">
                                         <div class="product-item">
                                             <span class="badge bg-success position-absolute m-3">-30%</span>
-                                            <a href="#" class="btn-wishlist"><svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg></a>
+                                            <a href="#" class="btn-wishlist">
+                                                <i class="bi bi-heart"></i>
+                                            </a>
                                             <figure>
                                                 <a href="index.html" title="Product Title">
                                                     <img src="/assets/images/thumb-cucumber.png" class="tab-image">
@@ -866,9 +860,9 @@
                                     <div class="col">
                                         <div class="product-item">
                                             <span class="badge bg-success position-absolute m-3">-30%</span>
-                                            <a href="#" class="btn-wishlist"><svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg></a>
+                                            <a href="#" class="btn-wishlist">
+                                                <i class="bi bi-heart"></i>
+                                            </a>
                                             <figure>
                                                 <a href="index.html" title="Product Title">
                                                     <img src="/assets/images/thumb-milk.png" class="tab-image">
@@ -912,9 +906,9 @@
                                     <div class="col">
                                         <div class="product-item">
                                             <span class="badge bg-success position-absolute m-3">-30%</span>
-                                            <a href="#" class="btn-wishlist"><svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg></a>
+                                            <a href="#" class="btn-wishlist">
+                                                <i class="bi bi-heart"></i>
+                                            </a>
                                             <figure>
                                                 <a href="index.html" title="Product Title">
                                                     <img src="/assets/images/thumb-orange-juice.png" class="tab-image">
@@ -957,9 +951,9 @@
 
                                     <div class="col">
                                         <div class="product-item">
-                                            <a href="#" class="btn-wishlist"><svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg></a>
+                                            <a href="#" class="btn-wishlist">
+                                                <i class="bi bi-heart"></i>
+                                            </a>
                                             <figure>
                                                 <a href="index.html" title="Product Title">
                                                     <img src="/assets/images/thumb-raspberries.png" class="tab-image">
@@ -1002,9 +996,9 @@
 
                                     <div class="col">
                                         <div class="product-item">
-                                            <a href="#" class="btn-wishlist"><svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg></a>
+                                            <a href="#" class="btn-wishlist">
+                                                <i class="bi bi-heart"></i>
+                                            </a>
                                             <figure>
                                                 <a href="index.html" title="Product Title">
                                                     <img src="/assets/images/thumb-bananas.png" class="tab-image">
@@ -1047,9 +1041,9 @@
 
                                     <div class="col">
                                         <div class="product-item">
-                                            <a href="#" class="btn-wishlist"><svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg></a>
+                                            <a href="#" class="btn-wishlist">
+                                                <i class="bi bi-heart"></i>
+                                            </a>
                                             <figure>
                                                 <a href="index.html" title="Product Title">
                                                     <img src="/assets/images/thumb-bananas.png" class="tab-image">
@@ -1101,9 +1095,9 @@
 
                                     <div class="col">
                                         <div class="product-item">
-                                            <a href="#" class="btn-wishlist"><svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg></a>
+                                            <a href="#" class="btn-wishlist">
+                                                <i class="bi bi-heart"></i>
+                                            </a>
                                             <figure>
                                                 <a href="index.html" title="Product Title">
                                                     <img src="/assets/images/thumb-cucumber.png" class="tab-image">
@@ -1146,9 +1140,9 @@
 
                                     <div class="col">
                                         <div class="product-item">
-                                            <a href="#" class="btn-wishlist"><svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg></a>
+                                            <a href="#" class="btn-wishlist">
+                                                <i class="bi bi-heart"></i>
+                                            </a>
                                             <figure>
                                                 <a href="index.html" title="Product Title">
                                                     <img src="/assets/images/thumb-milk.png" class="tab-image">
@@ -1191,8 +1185,7 @@
 
                                     <div class="col">
                                         <div class="product-item">
-                                            <a href="#" class="btn-wishlist"><svg width="24"
-                                                    height="24">
+                                            <a href="#" class="btn-wishlist"><svg width="24" height="24">
                                                     <use xlink:href="#heart"></use>
                                                 </svg></a>
                                             <figure>

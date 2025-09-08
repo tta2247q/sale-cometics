@@ -19,14 +19,14 @@ class CartItemsController extends Controller
         return view('front-end.pages.cartitems', compact('cartItems', 'total'));
     }
     public function getCartItems()
-{
-    $user = auth()->user();
-    if (!$user) {
-        return redirect()->route('login')->with('error', 'Bạn cần đăng nhập để xem giỏ hàng');
+    {
+        $user = auth()->user();
+        if (!$user) {
+            return redirect()->route('login')->with('error', 'Bạn cần đăng nhập để xem giỏ hàng');
+        }
+        $cartItems = $user->cartItems()->with('product')->get();
+        return view('front-end.pages.home', compact('cartItems'));
     }
-    $cartItems = $user->cartItems()->with('product')->get();
-    return view('front-end.pages.home', compact('cartItems'));
-}
 
     public function add(Product $product)
     {
@@ -52,5 +52,29 @@ class CartItemsController extends Controller
     {
         $cartItem->delete();
         return back()->with('success', 'Đã xóa sản phẩm khỏi giỏ hàng!');
+    }
+    public function update(Request $request, CartItem $cartItem)
+    {
+        // Bỏ authorize đi, tự check user_id nếu cần
+        if ($cartItem->user_id !== auth()->id()) {
+            abort(403, 'Không có quyền chỉnh sửa giỏ hàng này');
+        }
+
+        if ($request->action === 'increase') {
+            $cartItem->quantity++;
+        } elseif ($request->action === 'decrease' && $cartItem->quantity > 1) {
+            $cartItem->quantity--;
+        }
+
+        $cartItem->save();
+
+        return redirect()->route('cart.index')->with('success', 'Cập nhật giỏ hàng thành công!');
+    }
+    public function clear()
+    {
+        // Xóa toàn bộ giỏ hàng của user hiện tại
+        \App\Models\CartItem::where('user_id', auth()->id())->delete();
+
+        return redirect()->route('cart.index')->with('success', 'Đã xoá toàn bộ giỏ hàng!');
     }
 }
