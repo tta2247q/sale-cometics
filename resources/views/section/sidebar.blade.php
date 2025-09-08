@@ -28,7 +28,7 @@
                         <span class="menu-title-text">MAIN</span>
                     </li>
                     <li class="menu-item open">
-                        <a href="{{route('dashboard')}}" class="menu-link active">
+                        <a href="{{route('admin.dashboard')}}" class="menu-link active">
                             <span class="material-symbols-outlined menu-icon">dashboard</span>
                             <span class="title">Dashboard</span>
                             <span class="count">11</span>

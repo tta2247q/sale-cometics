@@ -21,7 +21,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
     </div>
     <div class="offcanvas-body">
-        <a href="{{route('dashboard')}}" class="d-block mb-2 text-decoration-none text-dark fw-bold">Dashboard</a>
+        <a href="{{route('admin.dashboard')}}" class="d-block mb-2 text-decoration-none text-dark fw-bold">Dashboard</a>
         <a href="{{route('Admin.users.index')}}" class="d-block mb-2 text-decoration-none text-dark fw-bold">Users</a>
         <a href="#" class="d-block mb-2 text-decoration-none text-dark fw-bold">Orders</a>
         <a href="{{route('Admin.products.index')}}" class="d-block mb-2 text-decoration-none text-dark fw-bold">Products</a>

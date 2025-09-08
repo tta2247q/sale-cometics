@@ -27,7 +27,7 @@
 
             <div class="col-sm-4 col-lg-3 text-center text-sm-start">
                 <div class="main-logo">
-                    <a href="{{route('home')}}">
+                    <a href="{{ route('home') }}">
                         <img src="/assets/images/logo.jpg" alt="logo" class=""
                             style="height: 60px; width: auto;">
                     </a>
@@ -67,13 +67,34 @@
                 </div>
 
                 <ul class="d-flex justify-content-end list-unstyled m-0">
-                    <li>
-                        <a href="{{ route('login') }}"
-                            class="d-flex align-items-center justify-content-center rounded-circle bg-light mx-1"
-                            style="width:50px; height:50px;">
-                            <i class="bi bi-person-fill fs-4 text-dark"></i>
-                        </a>
-                    </li>
+                    <div class="dropdown">
+    <a class="btn btn-user dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="bi bi-person-circle fs-4"></i>
+    </a>
+
+    <ul class="dropdown-menu dropdown-menu-end">
+        @guest
+            <li>
+                <a class="dropdown-item" href="{{ route('login') }}">Đăng nhập</a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="{{ route('register') }}">Đăng ký</a>
+            </li>
+        @endguest
+
+        @auth
+            <li>
+                <a class="dropdown-item" href="{{ route('profile') }}">Trang cá nhân</a>
+            </li>
+            <li>
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button class="dropdown-item" type="submit">Đăng xuất</button>
+                </form>
+            </li>
+        @endauth
+    </ul>
+</div>
                     <li>
                         <a href="{{ route('cart.index') }}"
                             class="d-flex align-items-center justify-content-center rounded-circle bg-light mx-1"
@@ -142,10 +163,10 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('news')}}" class="nav-link">News</a>
+                                    <a href="{{ route('news') }}" class="nav-link">News</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('contact')}}" class="nav-link">Contact</a>
+                                    <a href="{{ route('contact') }}" class="nav-link">Contact</a>
                                 </li>
                             </ul>
 

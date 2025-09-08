@@ -20,7 +20,11 @@ class CartItemsController extends Controller
     }
     public function getCartItems()
 {
-    $cartItems = auth()->user()->cartItems()->with('product')->get();
+    $user = auth()->user();
+    if (!$user) {
+        return redirect()->route('login')->with('error', 'Bạn cần đăng nhập để xem giỏ hàng');
+    }
+    $cartItems = $user->cartItems()->with('product')->get();
     return view('front-end.pages.home', compact('cartItems'));
 }
 
