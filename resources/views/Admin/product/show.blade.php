@@ -45,12 +45,14 @@
             <label for="productDescription" class="form-label">Mô tả</label>
             <textarea class="form-control" id="productDescription" rows="4" readonly>{{ $product->description }}</textarea>
         </div>
-        <a href="{{ route('Admin.products.edit', $product->id) }}" class="btn btn-warning">Sửa</a>
+        <div class="d-flex gap-2">
+            <a href="{{ route('Admin.products.edit', $product->id) }}" class="btn btn-warning">Sửa</a>
         <form action="{{ route('Admin.products.destroy', $product->id) }}" method="POST"
             onsubmit="return confirm('Bạn có chắc muốn xóa?');">
             @csrf
             @method('DELETE')
             <button class="btn btn-danger" type="submit">Xóa</button>
         </form>
+        </div>
     </div>
 @endsection

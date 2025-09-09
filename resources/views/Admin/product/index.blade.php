@@ -54,7 +54,10 @@
                             <h6 class="card-title">{{ $product->name }}</h6>
                             <p class="mb-1"><strong>{{ number_format($product->price, 0, ',', '.') }}đ</strong></p>
                             <small class="text-muted">SL: {{ $product->quantity }}</small>
-                            <div class="mt-auto d-flex gap-2">
+                            <div class=" d-flex gap-2 mt-4">
+                                <a href="{{ route('Admin.products.show', $product->id) }}" class="btn btn-sm btn-info">
+                                    chi tiết
+                                </a>
                                 <a href="{{ route('Admin.products.edit', $product->id) }}"
                                     class="btn btn-sm btn-warning">Sửa</a>
                                 <form action="{{ route('Admin.products.destroy', $product->id) }}" method="POST"

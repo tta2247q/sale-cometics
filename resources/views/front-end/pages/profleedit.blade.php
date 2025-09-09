@@ -23,14 +23,14 @@
 
             <div class="mb-3">
                 <label for="phone" class="form-label">Số điện thoại</label>
-                <input type="text" name="phone" id="phone" class="form-control" value="{{ old('phone', $user->phone) }}">
+                <input type="text" name="phone" id="phone" class="form-control" value="{{ old('phone', $user->number_phone) }}">
             </div>
 
             <div class="mb-3">
                 <label for="address" class="form-label">Địa chỉ</label>
                 <textarea name="address" id="address" class="form-control" rows="3">{{ old('address', $user->address) }}</textarea>
             </div>
-
+            
             <div class="mb-3">
                 <label for="avatar" class="form-label">Ảnh đại diện</label>
                 <input type="file" name="avatar" id="avatar" class="form-control">
