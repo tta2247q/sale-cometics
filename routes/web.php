@@ -9,6 +9,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CartItemsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Users\ProfileController;
+use App\Http\Controllers\BlogController;
 
 // ----------- Static Pages -----------
 Route::get('/news', [HomeController::class, 'news'])->name('news');
@@ -59,14 +60,16 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::put('/categories/{category}', [CategoryController::class, 'update'])->name('categories.update');
         Route::delete('/categories/{category}', [CategoryController::class, 'destroy'])->name('categories.destroy');
     });
-});
 
-// ----------- User Routes -----------
-// Route::middleware(['auth', 'role:user'])->group(function () {
-//     Route::get('/', function () {
-//         return view('front-end.pages.home');
-//     })->name('home');
-// });
+    // Blog CRUD
+    Route::get('/Admin/blogs',[BlogController::class,'index'])->name('blog.index');
+    Route::get('/Admin/blogs/create',[BlogController::class,'create'])->name('blog.create');
+    Route::post('/blogs',[BlogController::class,'store'])->name('blog.store');
+    Route::get('/blogs/{blog}/edit',[BlogController::class,'edit'])->name('blog.edit');
+    Route::put('/blogs/{blog}',[BlogController::class,'update'])->name('blog.update');
+    Route::delete('/blogs/{blog}',[BlogController::class,'destroy'])->name('blog.destroy');
+    Route::get('/blogs/{blog}',[BlogController::class,'show'])->name('blog.show');
+});
 
 // ----------- Cart Routes -----------
 Route::middleware('auth')->group(function () {
@@ -79,11 +82,6 @@ Route::middleware('auth')->group(function () {
 
 // ----------- Public Product List -----------
 Route::get('/products', [ProductController::class, 'showProducts'])->name('products.list');
-Route::get('/', [ProductController::class, 'home'])->name('home');
-
-// ----------- Home Route -----------
-// Route::get('/c', [CartItemsController::class, 'getCartItems'])->name('home');
-
-
+Route::get('/', [ProductController::class, 'home'])->name('home'); 
 Route::get('profile/edit/{id}', [ProfileController::class, 'edit'])->name('users.edit');
 Route::put('profile/update/{id}', [ProfileController::class, 'update'])->name('users.update');

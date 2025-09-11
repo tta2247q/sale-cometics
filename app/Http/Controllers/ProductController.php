@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Models\Blog;
 
 class ProductController extends Controller
 {
@@ -97,6 +98,7 @@ class ProductController extends Controller
     public function home()
     {
         $products = Product::latest()->take(10)->get();
+        $blogs = Blog::latest()->take(5)->get();
         return view('front-end.pages.Home', compact('products'));
     }
 }
