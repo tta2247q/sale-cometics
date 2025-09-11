@@ -16,38 +16,45 @@
     <link rel="stylesheet" href="{{ asset('assets/css/User/style copy.css') }}">
 </head>
 <style>
-#backToTop {
-    display: none; /* ẩn mặc định */
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background-color: #0d6efd; /* xanh Bootstrap */
-    color: white;
-    cursor: pointer;
-    padding: 12px 16px;
-    border-radius: 50%;
-    font-size: 18px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-}
+    #backToTop {
+        display: none;
+        /* ẩn mặc định */
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-color: #0d6efd;
+        /* xanh Bootstrap */
+        color: white;
+        cursor: pointer;
+        padding: 12px 16px;
+        border-radius: 50%;
+        font-size: 18px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+    }
 
-#backToTop:hover {
-    background-color: #0b5ed7;
-    transform: scale(1.1);
-}
+    #backToTop:hover {
+        background-color: #0b5ed7;
+        transform: scale(1.1);
+    }
 </style>
+
 <body>
-    @include('section.header')
+    @if (!Request::is('login'))
+        @include('section.header')
+    @endif
     <div class="">
         @yield('slot')
     </div>
     <button id="backToTop" class="btn btn-primary" title="Lên đầu trang">
-    <i class="bi bi-arrow-up"></i>
-</button>
-    @include('section.footer')
+        <i class="bi bi-arrow-up"></i>
+    </button>
+    @if (!Request::is('login'))
+        @include('section.footer')
+    @endif
 
 
 
@@ -59,22 +66,25 @@
     <script src="{{ asset('assets/js/plugins.js') }}"></script>
 
 
-<script>
-// hiện nút khi scroll xuống
-window.onscroll = function() {
-    let btn = document.getElementById("backToTop");
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        btn.style.display = "block";
-    } else {
-        btn.style.display = "none";
-    }
-};
+    <script>
+        // hiện nút khi scroll xuống
+        window.onscroll = function() {
+            let btn = document.getElementById("backToTop");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
 
-// scroll mượt về đầu
-document.getElementById("backToTop").addEventListener("click", function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-</script>
+        // scroll mượt về đầu
+        document.getElementById("backToTop").addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 
 </body>
 

@@ -16,7 +16,7 @@ class AuthController extends Controller
             if ($user->role === 'admin') {
                 return redirect()->route('admin.dashboard');
             } else {
-                return redirect()->route('user.dashboard');
+                return redirect()->route('home');
             }
         }
         return view('front-end.pages.login');
@@ -34,7 +34,7 @@ class AuthController extends Controller
             if ($user->role === 'admin') {
                 return redirect()->route('admin.dashboard');
             } else {
-                return redirect()->route('user.dashboard');
+                return redirect()->route('home');
             }
         }
 
@@ -46,7 +46,7 @@ class AuthController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect()->route('user.dashboard');
+        return redirect()->route('home');
     }
     public function showRegisterForm()
     {
@@ -69,6 +69,6 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('user.dashboard');
+        return redirect()->route('home');
     }
 }

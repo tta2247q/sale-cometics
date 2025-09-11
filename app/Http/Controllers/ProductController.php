@@ -15,21 +15,6 @@ class ProductController extends Controller
         return view('Admin.product.index', compact('products', 'totalProducts'));
     }
 
-public function showProducts(Request $request)
-{
-    $query = Product::query();
-
-    if ($request->has('category') && $request->category) {
-        $query->whereHas('categories', function ($q) use ($request) {
-    $q->where('categories.id', $request->category);
-});
-    }
-
-    $products = $query->get();
-    $categories = Category::all();
-
-    return view('front-end.pages.product', compact('products', 'categories'));
-}
     public function create()
     {
         $categories = Category::all();
@@ -93,5 +78,25 @@ public function showProducts(Request $request)
     {
         $product->delete();
         return redirect()->route('Admin.products.index')->with('success', 'Product deleted');
+    }
+    public function showProducts(Request $request)
+    {
+        $query = Product::query();
+
+        if ($request->has('category') && $request->category) {
+            $query->whereHas('categories', function ($q) use ($request) {
+                $q->where('categories.id', $request->category);
+            });
+        }
+
+        $products = $query->get();
+        $categories = Category::all();
+
+        return view('front-end.pages.product', compact('products', 'categories'));
+    }
+    public function home()
+    {
+        $products = Product::latest()->take(10)->get();
+        return view('front-end.pages.Home', compact('products'));
     }
 }

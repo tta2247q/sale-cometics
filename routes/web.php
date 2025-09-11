@@ -62,11 +62,11 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 });
 
 // ----------- User Routes -----------
-Route::middleware(['auth', 'role:user'])->group(function () {
-    Route::get('/', function () {
-        return view('front-end.pages.home');
-    })->name('user.dashboard');
-});
+// Route::middleware(['auth', 'role:user'])->group(function () {
+//     Route::get('/', function () {
+//         return view('front-end.pages.home');
+//     })->name('home');
+// });
 
 // ----------- Cart Routes -----------
 Route::middleware('auth')->group(function () {
@@ -79,6 +79,7 @@ Route::middleware('auth')->group(function () {
 
 // ----------- Public Product List -----------
 Route::get('/products', [ProductController::class, 'showProducts'])->name('products.list');
+Route::get('/', [ProductController::class, 'home'])->name('home');
 
 // ----------- Home Route -----------
 // Route::get('/c', [CartItemsController::class, 'getCartItems'])->name('home');
