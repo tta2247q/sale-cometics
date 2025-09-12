@@ -72,7 +72,6 @@ class CartItemsController extends Controller
     }
     public function clear()
     {
-        // Xóa toàn bộ giỏ hàng của user hiện tại
         \App\Models\CartItem::where('user_id', auth()->id())->delete();
 
         return redirect()->route('cart.index')->with('success', 'Đã xoá toàn bộ giỏ hàng!');

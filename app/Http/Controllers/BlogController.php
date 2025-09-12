@@ -58,9 +58,4 @@ class BlogController extends Controller
     public function show(Blog $blog){
         return view('Admin.blog.show',compact('blog'));
     }
-    public function showhome(){
-        $blogs = Blog::all();
-        $product = Product::all();
-        return view('front-end.pages.Home',compact('blogs','product'));
-    }
 }

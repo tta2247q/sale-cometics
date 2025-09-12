@@ -4,25 +4,17 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-8">
-                    <div class="card mb-4 news-card">
-                        <img src="/assets/images/hoa-qua.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Summer Smoothie Recipes You Must Try</h5>
-                            <p class="card-text text-muted">Discover the healthiest smoothie recipes made from fresh fruits
-                                & veggies. Perfect for your summer vibes!</p>
-                            <a href="#" class="btn btn-success">Read More</a>
+                    @foreach ($blogs as $blog)
+                        <div class="card mb-4 news-card">
+                            <img src="{{ asset('storage/' . $blog->image) }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">{{ $blog->title }}</h5>
+                                <p class="card-text text-muted post-excerpt">{{ $blog->description }}</p>
+                                <a href="#" class="btn btn-success">Read More</a>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="card mb-4 news-card">
-                        <img src="/assets/images/hoa-qua.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Benefits of Organic Vegetables</h5>
-                            <p class="card-text text-muted">Organic veggies are not only healthier but also packed with
-                                nutrients. Here's why you should switch today!</p>
-                            <a href="#" class="btn btn-success">Read More</a>
-                        </div>
-                    </div>
+                    @endforeach
+                    
                 </div>
 
                 <div class="col-lg-4">

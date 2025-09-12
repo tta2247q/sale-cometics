@@ -82,6 +82,6 @@ Route::middleware('auth')->group(function () {
 
 // ----------- Public Product List -----------
 Route::get('/products', [ProductController::class, 'showProducts'])->name('products.list');
-Route::get('/', [ProductController::class, 'home'])->name('home'); 
+Route::get('/', [HomeController::class, 'home'])->name('home'); 
 Route::get('profile/edit/{id}', [ProfileController::class, 'edit'])->name('users.edit');
 Route::put('profile/update/{id}', [ProfileController::class, 'update'])->name('users.update');

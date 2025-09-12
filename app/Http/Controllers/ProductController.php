@@ -95,10 +95,4 @@ class ProductController extends Controller
 
         return view('front-end.pages.product', compact('products', 'categories'));
     }
-    public function home()
-    {
-        $products = Product::latest()->take(10)->get();
-        $blogs = Blog::latest()->take(5)->get();
-        return view('front-end.pages.Home', compact('products', 'blogs'));
-    }
 }
