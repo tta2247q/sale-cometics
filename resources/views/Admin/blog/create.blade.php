@@ -9,7 +9,7 @@
             </ul>
         </div>
     @endif
-    <form action="{{ route('blog.stort') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('blog.store') }}" method="POST" enctype="multipart/form-data">
 
         <div class="container mt-4">
             <div class="mb-3">

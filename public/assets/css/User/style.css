@@ -21,3 +21,11 @@
     object-fit: cover; /* Đảm bảo ảnh không bị méo */
     padding: 10px;
 }
+
+.post-excerpt{
+     display: -webkit-box;
+    -webkit-line-clamp: 5;       /* số dòng muốn giới hạn (5 hoặc 6) */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

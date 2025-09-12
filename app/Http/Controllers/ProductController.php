@@ -99,6 +99,6 @@ class ProductController extends Controller
     {
         $products = Product::latest()->take(10)->get();
         $blogs = Blog::latest()->take(5)->get();
-        return view('front-end.pages.Home', compact('products'));
+        return view('front-end.pages.Home', compact('products', 'blogs'));
     }
 }

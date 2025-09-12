@@ -2148,7 +2148,7 @@
                         <article class="post-item card border-0 shadow-sm p-3">
                             <div class="image-holder zoom-effect">
                                 <a href="#">
-                                    <img src="{{ asset('storage/' . $bl->image) }}" alt="post"
+                                    <img src="{{ asset('storage/' . $bl->images) }}" alt="post"
                                         class="card-img-top">
                                 </a>
                             </div>
@@ -2156,19 +2156,16 @@
                                 <div class="post-meta d-flex text-uppercase gap-3 my-2 align-items-center">
                                     <div class="meta-date"><svg width="16" height="16">
                                             <use xlink:href="#calendar"></use>
-                                        </svg>22 Aug 2021</div>
+                                        </svg>{{ $bl->created_at ->format('d/m/Y') }} </div>
                                     <div class="meta-categories"><svg width="16" height="16">
                                             <use xlink:href="#category"></use>
-                                        </svg>tips & tricks</div>
+                                        </svg>{{ $bl->author }}</div>
                                 </div>
                                 <div class="post-header">
                                     <h3 class="post-title">
-                                        <a href="#" class="text-decoration-none">Top 10 casual look ideas to dress
-                                            up
-                                            your kids</a>
+                                        <a href="#" class="text-decoration-none">{{ $bl->title }}</a>
                                     </h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim
-                                        tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...</p>
+                                    <p class="post-excerpt">{{ $bl->description }}</p>
                                 </div>
                             </div>
                         </article>

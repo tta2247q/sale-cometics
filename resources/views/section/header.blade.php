@@ -103,19 +103,7 @@
                         </a>
                     </li>
 
-                    <li class="d-lg-none">
-                        <a href="#" class="rounded-circle bg-light p-2 mx-1">
-
-                        </a>
-                    </li>
-                    <li class="d-lg-none">
-                        <a href="#" class="rounded-circle bg-light p-2 mx-1" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch">
-                            <svg width="24" height="24" viewBox="0 0 24 24">
-                                <use xlink:href="#search"></use>
-                            </svg>
-                        </a>
-                    </li>
+                    
                 </ul>
 
             </div>
