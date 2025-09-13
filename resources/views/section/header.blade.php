@@ -10,8 +10,8 @@
             <div class="col-sm-4 col-lg-3 text-center text-sm-start">
                 <div class="main-logo">
                     <a href="{{ route('home') }}">
-                        <img src="/assets/images/logo.jpg" alt="logo" class=""
-                            style="height: 60px; width: auto;">
+                        <img src="/assets/images/logo.png" alt="logo" class=""
+                            style="height: 100px; width: auto;">
                     </a>
                 </div>
             </div>
@@ -144,7 +144,7 @@
 
         <!-- Logo -->
         <a class="navbar-brand" href="{{ route('home') }}">
-            <img src="/assets/images/logo.jpg" alt="logo" style="height: 50px; width: auto;">
+            <img src="/assets/images/logo.png" alt="logo" style="height: 50px; width: auto;">
         </a>
 
         <!-- Search (desktop) -->

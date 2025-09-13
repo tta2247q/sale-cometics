@@ -4,7 +4,7 @@
 
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="footer-menu">
-              <img style="height: 60px; width: auto;" src="/assets/images/logo.jpg" alt="logo">
+              <img style="height: 100px; width: auto;" src="/assets/images/logo.png" alt="logo">
               <div class="social-links mt-5">
                 <ul class="d-flex list-unstyled gap-2">
                   <li>
