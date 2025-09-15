@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Blog;
 use App\Models\Category;
+use App\Models\Contact;
 
 class HomeController extends Controller
 {
@@ -27,6 +28,7 @@ class HomeController extends Controller
         $products = Product::latest()->take(10)->get();
         $blogs = Blog::latest()->take(5)->get();
         $categories = Category::all();  
+        $contacts = Contact::all();
         return view('front-end.pages.Home', compact('products', 'blogs', 'categories'));
     }
 }

@@ -10,6 +10,7 @@ use App\Http\Controllers\CartItemsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Users\ProfileController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactController;
 
 // ----------- Static Pages -----------
 Route::get('/news', [HomeController::class, 'news'])->name('news');
@@ -85,3 +86,6 @@ Route::get('/products', [ProductController::class, 'showProducts'])->name('produ
 Route::get('/', [HomeController::class, 'home'])->name('home'); 
 Route::get('profile/edit/{id}', [ProfileController::class, 'edit'])->name('users.edit');
 Route::put('profile/update/{id}', [ProfileController::class, 'update'])->name('users.update');
+
+// ----------- Contact Routes -----------
+    Route::post('/contacts', [ContactController::class, 'store'])->name('contact.store');

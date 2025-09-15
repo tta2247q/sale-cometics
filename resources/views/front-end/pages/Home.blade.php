@@ -1210,7 +1210,8 @@
                                 posuere maecenas. At tellus ut nunc amet vel egestas.</p>
                         </div>
                         <div class="col-md-6 p-5">
-                            <form>
+                            <form action="{{ route('contact.store') }}" method="POST" class="contact-form">
+                                @csrf
                                 <div class="mb-3">
                                     <label for="name" class="form-label">Name</label>
                                     <input type="text" class="form-control form-control-lg" name="name"
@@ -1220,6 +1221,16 @@
                                     <label for="" class="form-label">Email</label>
                                     <input type="email" class="form-control form-control-lg" name="email"
                                         id="email" placeholder="abc@mail.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="address" class="form-label">Address</label>
+                                    <input type="text" class="form-control form-control-lg" name="address"
+                                        id="address" placeholder="Address">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control form-control-lg" name="message" id="message" rows="3"
+                                        placeholder="Your message"></textarea>
                                 </div>
                                 <div class="form-check form-check-inline mb-3">
                                     <label class="form-check-label" for="subscribe">
