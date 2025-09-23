@@ -19,4 +19,12 @@ class ContactController extends Controller
         $contact = Contact::create($data);
         return redirect()->route('home')->with('success', 'Your message has been sent successfully!');
     }
+    public function index(){
+        $contacts = Contact::all();
+        return view('Admin.contact.index', compact('contacts'));
+    }
+    public function show($id){
+        $contact = Contact::findOrFail($id);
+        return view('Admin.contact.show', compact('contact'));
+    }
 }

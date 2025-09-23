@@ -43,14 +43,19 @@
                 <input type="number" class="form-control" id="quantity" name="quantity" required>
             </div>
             <div class="mb-3">
-                <label for="categories" class="form-label">Danh mục</label>
-                <select name="categories[]" id="categories" class="form-select" multiple data-placeholder="Chọn danh mục..."
-                    required>
+                <label class="form-label">Danh mục</label>
+                <div class="d-flex flex-wrap">
                     @foreach ($categories as $category)
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        <div class="form-check me-4 mb-2">
+                            <input class="form-check-input big-checkbox" type="checkbox" name="categories[]"
+                                id="category_{{ $category->id }}" value="{{ $category->id }}">
+                            <label class="form-check-label ms-1" for="category_{{ $category->id }}">
+                                {{ $category->name }}
+                            </label>
+                        </div>
                     @endforeach
-                </select>
-                <small class="text-muted">Giữ Ctrl (Windows) hoặc Command (Mac) để chọn nhiều danh mục</small>
+                </div>
+                <small class="text-muted">Tích chọn một hoặc nhiều danh mục</small>
             </div>
 
             <button type="submit" class="btn btn-primary">Thêm</button>

@@ -66,6 +66,12 @@
                             <span class="title">Blogs</span>
                         </a>
                     </li>
+                    <li class="menu-item">
+                        <a href="{{ route('Admin.contacts.index') }}" class="menu-link">
+                            <span class="material-symbols-outlined menu-icon">email</span>
+                            <span class="title">Contact Messages</span>
+                        </a>
+                    </li>
 
                     <li class="menu-item">
                         <a href="javascript:void(0);" class="menu-link menu-toggle active">

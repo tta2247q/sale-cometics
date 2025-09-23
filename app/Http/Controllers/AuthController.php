@@ -50,7 +50,7 @@ class AuthController extends Controller
     }
     public function showRegisterForm()
     {
-        return view('front-end.pages.login');
+        return view('front-end.pages.register');
     }
     public function register(Request $request)
     {
@@ -69,6 +69,6 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('home');
+        return redirect()->route('login')->with('success', 'Đăng ký thành công! Vui lòng đăng nhập.');
     }
 }

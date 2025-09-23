@@ -43,7 +43,7 @@
 </style>
 
 <body>
-    @if (!Request::is('login'))
+    @if (!Request::is('login') && !Request::is('register'))
         @include('section.header')
     @endif
     <div class="">
@@ -52,7 +52,7 @@
     <button id="backToTop" class="btn btn-primary" title="Lên đầu trang">
         <i class="bi bi-arrow-up"></i>
     </button>
-    @if (!Request::is('login'))
+    @if (!Request::is('login') && !Request::is('register'))
         @include('section.footer')
     @endif
 

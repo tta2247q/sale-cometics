@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.0/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/Admin/style.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/css/Admin/style2.css') }}" type="text/css">
+
 
     {{-- Chuyển hết thành đường dẫn tuyệt đối cho anh
 
@@ -42,7 +44,7 @@
         <div class="main-content d-flex flex-column">
             @include('section.header_admin')
             @yield('content')
-            @include('section.footer_admin')
+            {{-- @include('section.footer_admin') --}}
         </div>
     </div>
      <button class="btn btn-primary theme-settings-btn p-0 position-fixed z-2 text-center rounded-circle"
@@ -55,7 +57,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{asset('assets/js/admin.js')}}"></script>
-
     <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('assets/js/sidebar-menu.js')}}"></script>
     <script src="{{asset('assets/js/quill.min.js')}}"></script>

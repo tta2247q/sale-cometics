@@ -33,6 +33,9 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         return view('Admin.dashboard.index');
     })->name('admin.dashboard');
 
+    Route::get('/Admin/contacts', [ContactController::class, 'index'])->name('Admin.contacts.index');
+    Route::get('/Admin/contacts/{id}', [ContactController::class, 'show'])->name('Admin.contacts.show');
+
     // Product CRUD
     Route::get('/Admin/product', [ProductController::class, 'index'])->name('Admin.products.index');
     Route::get('/Admin/product/create', [ProductController::class, 'create'])->name('Admin.products.create');
@@ -76,14 +79,14 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 Route::middleware('auth')->group(function () {
     Route::get('/cart', [CartItemsController::class, 'index'])->name('cart.index');
     Route::post('/cart/add/{product}', [CartItemsController::class, 'add'])->name('cart.add');
-    Route::post('/cart/update/{cartItem}', [CartItemsController::class, 'update'])->name('cart.update'); // thêm dòng này
+    Route::post('/cart/update/{cartItem}', [CartItemsController::class, 'update'])->name('cart.update');
     Route::delete('/cart/remove/{cartItem}', [CartItemsController::class, 'remove'])->name('cart.remove');
-    Route::delete('/cart/clear', [CartItemsController::class, 'clear'])->name('cart.clear'); // nếu muốn xoá hết
+    Route::delete('/cart/clear', [CartItemsController::class, 'clear'])->name('cart.clear');
 });
 
 // ----------- Public Product List -----------
 Route::get('/products', [ProductController::class, 'showProducts'])->name('products.list');
-Route::get('/', [HomeController::class, 'home'])->name('home'); 
+Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('profile/edit/{id}', [ProfileController::class, 'edit'])->name('users.edit');
 Route::put('profile/update/{id}', [ProfileController::class, 'update'])->name('users.update');
 
