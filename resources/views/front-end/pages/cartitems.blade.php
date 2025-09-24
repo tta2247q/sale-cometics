@@ -75,7 +75,7 @@
                 <button type="submit" class="btn btn-outline-danger btn-sm">🗑 Xoá tất cả</button>
             </form>
 
-            <button class="btn btn-primary">Thanh toán</button>
+            <a href="{{ route('payment') }}" class="btn btn-primary">Thanh toán</a>
         </div>
     @else
         <p>🚫 Giỏ hàng trống.</p>

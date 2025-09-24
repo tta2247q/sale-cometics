@@ -16,6 +16,7 @@ use App\Http\Controllers\ContactController;
 Route::get('/news', [HomeController::class, 'news'])->name('news');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
+Route::get('/payment', [HomeController::class, 'payment'])->name('payment');
 
 // ----------- Auth Routes -----------
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');

@@ -7,6 +7,8 @@ use App\Models\Product;
 use App\Models\Blog;
 use App\Models\Category;
 use App\Models\Contact;
+use App\Models\CartItem;   
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -30,5 +32,15 @@ class HomeController extends Controller
         $categories = Category::all();
         $contacts = Contact::all();
         return view('front-end.pages.Home', compact('products', 'blogs', 'categories'));
+    }
+    public function payment()
+    {
+        $user = User::all();
+        $cartItems = CartItem::with('product')
+            ->where('user_id', auth()->id())
+            ->get();
+
+        $total = $cartItems->sum(fn($item) => $item->price * $item->quantity);
+        return view('front-end.pages.payment', compact('cartItems', 'total', 'user'));
     }
 }
