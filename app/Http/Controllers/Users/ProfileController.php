@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Users;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage; // Thêm dòng này
+use Illuminate\Support\Facades\Storage; 
 
 class ProfileController extends Controller
 {

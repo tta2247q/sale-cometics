@@ -11,26 +11,25 @@
                         <h5 class="mb-0">Thông tin khách hàng</h5>
                     </div>
                     <div class="card-body">
-                        @foreach ($user as $users)
                             @csrf
                             <div class="mb-3">
                                 <label for="name" class="form-label">Họ và tên</label>
-                                <strong>{{ $users->name }}</strong>
+                                <strong>{{ Auth::user()->name }}</strong>
                             </div>
 
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <strong>{{ $users->email }}</strong>
+                                <strong>{{ Auth::user()->email }}</strong>
                             </div>
 
                             <div class="mb-3">
                                 <label for="phone" class="form-label">Số điện thoại</label>
-                                <strong>{{ $users->number_phone }}</strong>
+                                <strong>{{ Auth::user()->number_phone }}</strong>
                             </div>
 
                             <div class="mb-3">
                                 <label for="address" class="form-label">Địa chỉ giao hàng</label>
-                                <strong>{{ $users->address }}</strong>
+                                <strong>{{ Auth::user()->address }}</strong>
                             </div>
 
                             <div class="mb-3">
@@ -41,7 +40,6 @@
                                     <option value="momo">Thanh toán MoMo</option>
                                 </select>
                             </div>
-                        @endforeach
                         <button type="submit" class="btn btn-success w-100">Xác nhận đặt hàng</button>
                         </form>
                     </div>
