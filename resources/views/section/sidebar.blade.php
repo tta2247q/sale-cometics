@@ -1,4 +1,4 @@
-<div class="sidebar-area" id="sidebar-area">
+<div class="sidebar-area bg-dark" id="sidebar-area">
             <div class="logo position-relative d-flex align-items-center justify-content-between">
                 <a href="index.html" class="d-block text-decoration-none position-relative">
                     <img src="assets/images/logo-icon.png" alt="logo-icon">
@@ -29,9 +29,8 @@
                     </li>
                     <li class="menu-item open">
                         <a href="{{route('admin.dashboard')}}" class="menu-link active">
-                            <span class="material-symbols-outlined menu-icon">dashboard</span>
-                            <span class="title">Dashboard</span>
-                            <span class="count">11</span>
+                            <span class="me-2"><i class="bi bi-columns-gap"></i></span>
+                            <span class="title">Quản lý sản phẩm</span>
                         </a>
                     </li>
 
@@ -42,10 +41,37 @@
 
 
                     <li class="menu-item">
-                        <a href="{{ route('Admin.products.index') }}" class="menu-link">
-                            <span class="material-symbols-outlined menu-icon">perm_contact_calendar</span>
-                            <span class="title">Product</span>
+                        <a href="javascript:void(0);" class="menu-link menu-toggle active">
+                            <span class="material-symbols-outlined menu-icon"></span>
+                            <span class="title">Quản lý sản phẩm</span>
                         </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="account-settings.html" class="menu-link">
+                                    Account Settings
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="change-password.html" class="menu-link">
+                                    Change Password
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="connections.html" class="menu-link">
+                                    Connections
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="privacy-policy.html" class="menu-link">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="terms-conditions.html" class="menu-link">
+                                    Terms & Conditions
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="menu-item">
                         <a href="{{ route('Admin.categories.index') }}" class="menu-link">

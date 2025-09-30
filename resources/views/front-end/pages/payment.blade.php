@@ -46,7 +46,6 @@
                 </div>
             </div>
 
-            <!-- Thông tin giỏ hàng -->
             <div class="col-md-6">
                 <div class="card shadow-sm">
                     <div class="card-header bg-secondary text-white">
